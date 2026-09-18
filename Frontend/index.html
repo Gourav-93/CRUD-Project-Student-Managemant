@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Student Management System</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Student Management System</h1>
+
+      <!-- Student Form -->
+      <div class="form-box">
+        <h2 id="formTitle">Add Student</h2>
+
+        <input type="hidden" id="studentId" />
+
+        <input type="text" id="name" placeholder="Enter Name" />
+
+        <input type="email" id="email" placeholder="Enter Email" />
+
+        <input type="number" id="age" placeholder="Enter Age" />
+
+        <input type="text" id="course" placeholder="Enter Course" />
+
+        <button onclick="saveStudent()" id="saveButton">Add Student</button>
+
+        <button onclick="clearForm()" class="cancel-btn">Clear</button>
+      </div>
+
+      <!-- Search Student -->
+      <div class="search-box">
+        <input type="number" id="searchId" placeholder="Enter Student ID" />
+
+        <button onclick="searchStudent()">Search</button>
+
+        <button onclick="getStudents()">Show All</button>
+      </div>
+
+      <!-- Student Table -->
+      <div class="table-box">
+        <h2>Students</h2>
+
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Age</th>
+              <th>Course</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+
+          <tbody id="studentTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
