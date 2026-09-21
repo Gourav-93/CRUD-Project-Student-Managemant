@@ -1,3 +1,7 @@
+if (localStorage.getItem("isLoggedIn") === "true") {
+  window.location.href = "index.html";
+}
+
 const AUTH_API = "http://localhost:5230/api/auth";
 
 async function registerUser() {
@@ -85,6 +89,9 @@ async function loginUser() {
     if (data.token) {
       localStorage.setItem("token", data.token);
     }
+    
+    // Set simple login state
+    localStorage.setItem("isLoggedIn", "true");
 
     alert("Login successful!");
 

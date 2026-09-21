@@ -1,3 +1,8 @@
+// Authentication Guard
+if (localStorage.getItem("isLoggedIn") !== "true") {
+  window.location.href = "login.html";
+}
+
 const API_URL = "http://localhost:5230/api/Student";
 
 async function getStudents() {
@@ -253,3 +258,11 @@ function clearForm() {
 window.onload = function () {
   getStudents();
 };
+
+// Logout Function
+function logoutUser() {
+  localStorage.removeItem("isLoggedIn");
+  // Optional: Also remove the token if using JWT
+  localStorage.removeItem("token");
+  window.location.href = "login.html";
+}
