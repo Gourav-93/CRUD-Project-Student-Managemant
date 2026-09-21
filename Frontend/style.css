@@ -1,122 +1,114 @@
-css * {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+  }
 
 body {
-  font-family: Arial, sans-serif;
-  background: #f4f6f8;
-  padding: 30px;
+font-family: Arial, sans-serif;
+background: #f4f6f8;
+padding: 30px;
 }
 
 .container {
-  max-width: 1100px;
-  margin: auto;
+max-width: 1100px;
+margin: auto;
 }
 
 h1 {
-  text-align: center;
-  margin-bottom: 30px;
-  color: #222;
+text-align: center;
+margin-bottom: 30px;
+color: #222;
 }
 
-.form-box,
-.search-box,
-.table-box {
-  background: white;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+.form-box {
+background: white;
+padding: 20px;
+margin-bottom: 20px;
+border-radius: 10px;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
-  margin-bottom: 15px;
+margin-bottom: 15px;
 }
 
 input {
-  padding: 10px;
-  margin: 5px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+padding: 10px;
+margin: 5px;
+border: 1px solid #ccc;
+border-radius: 5px;
 }
 
 button {
-  padding: 10px 15px;
-  margin: 5px;
-  border: none;
-  border-radius: 5px;
-  background: #007bff;
-  color: white;
-  cursor: pointer;
+padding: 10px 15px;
+margin: 5px;
+border: none;
+border-radius: 5px;
+background: #007bff;
+color: white;
+cursor: pointer;
 }
 
 button:hover {
-  background: #0056b3;
+background: #0056b3;
 }
 
-.cancel-btn {
-  background: #777;
+/* Login / Register */
+
+.auth-container {
+max-width: 500px;
+margin: 80px auto;
 }
 
-.cancel-btn:hover {
-  background: #555;
+.auth-box {
+padding: 30px;
+text-align: center;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
+.auth-box h2 {
+margin-bottom: 20px;
 }
 
-th,
-td {
-  padding: 12px;
-  text-align: center;
-  border-bottom: 1px solid #ddd;
+.auth-box input {
+display: block;
+width: 100%;
+margin: 10px 0;
+padding: 12px;
 }
 
-th {
-  background: #007bff;
-  color: white;
+.auth-box button {
+width: 100%;
+margin: 10px 0;
+padding: 12px;
 }
 
-.edit-btn {
-  background: #28a745;
+.auth-text {
+margin-top: 15px;
+color: #555;
 }
 
-.edit-btn:hover {
-  background: #1e7e34;
+.auth-text a {
+color: #007bff;
+text-decoration: none;
+font-weight: bold;
 }
 
-.delete-btn {
-  background: #dc3545;
-}
-
-.delete-btn:hover {
-  background: #bd2130;
+.auth-text a:hover {
+text-decoration: underline;
 }
 
 @media (max-width: 700px) {
-  body {
-    padding: 10px;
-  }
 
-  input {
-    width: 100%;
-    margin: 5px 0;
-  }
+body {
+padding: 10px;
+}
 
-  button {
-    width: 100%;
-    margin: 5px 0;
-  }
+.auth-container {
+margin: 40px auto;
+}
 
-  .table-box {
-    overflow-x: auto;
-  }
-
-  table {
-    min-width: 700px;
-  }
+.auth-box {
+padding: 20px;
+}
 }
